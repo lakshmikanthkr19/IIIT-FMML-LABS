@@ -103,24 +103,24 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "KJN4RJuYWp7L",
-        "outputId": "50034bb2-1fe8-4602-ccec-343161a4a38f"
+        "outputId": "8225d628-6ec6-4dad-e0a9-aad11e0ededb"
       },
       "source": [
         "!pip install faker"
       ],
-      "execution_count": 1,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
           "name": "stdout",
           "text": [
             "Collecting faker\n",
-            "  Downloading Faker-24.9.0-py3-none-any.whl (1.8 MB)\n",
-            "\u001b[2K     \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m1.8/1.8 MB\u001b[0m \u001b[31m7.6 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n",
+            "  Downloading Faker-22.5.1-py3-none-any.whl (1.7 MB)\n",
+            "\u001b[2K     \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m1.7/1.7 MB\u001b[0m \u001b[31m8.5 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n",
             "\u001b[?25hRequirement already satisfied: python-dateutil>=2.4 in /usr/local/lib/python3.10/dist-packages (from faker) (2.8.2)\n",
             "Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil>=2.4->faker) (1.16.0)\n",
             "Installing collected packages: faker\n",
-            "Successfully installed faker-24.9.0\n"
+            "Successfully installed faker-22.5.1\n"
           ]
         }
       ]
@@ -132,7 +132,7 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "OOWCDj91WgmS",
-        "outputId": "e6b37b83-e887-42f0-abfc-82cbd4e21c52"
+        "outputId": "4f37670b-61e1-4281-d952-5126b0e2972a"
       },
       "source": [
         "# We will first generate the data\n",
@@ -177,7 +177,7 @@
         "# Print a subsection of the DataFrame\n",
         "print(salary_df.head())"
       ],
-      "execution_count": 2,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -200,7 +200,7 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "p3CeOLb3XVOl",
-        "outputId": "c83d494b-e269-44c2-c2ed-e4dd2373f23d"
+        "outputId": "108a4ace-9b21-4e70-c246-7211e70c0238"
       },
       "source": [
         "salary_df.at[16, 'Salary (in USD)'] = 23\n",
@@ -210,7 +210,7 @@
         "print(salary_df.loc[16])\n",
         "print(salary_df.loc[65])"
       ],
-      "execution_count": 3,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -234,14 +234,14 @@
           "height": 430
         },
         "id": "AuO2rU0KW-iF",
-        "outputId": "87377be4-790f-4339-d500-38b2beeb6d9e"
+        "outputId": "9119529e-cecd-418c-f07f-6d05ef067073"
       },
       "source": [
         "# Generate a Histogram plot\n",
         "salary_df['Salary (in USD)'].plot(kind='hist')\n",
         "plt.show()"
       ],
-      "execution_count": 4,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "display_data",
@@ -299,7 +299,7 @@
         "salary_raw = salary_raw.reshape(-1, 1)\n",
         "salary_raw = salary_raw.astype('float64')"
       ],
-      "execution_count": 5,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -314,7 +314,7 @@
         "# Specify the data and the number of clusters to kmeans()\n",
         "centroids, avg_distance = kmeans(salary_raw, 4)"
       ],
-      "execution_count": 6,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -328,7 +328,7 @@
         "\n",
         "groups, cdist = vq(salary_raw, centroids)"
       ],
-      "execution_count": 7,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -339,7 +339,7 @@
           "height": 453
         },
         "id": "EvnmlCwQXklq",
-        "outputId": "ead17327-5cab-4bd8-ba37-b29669308be9"
+        "outputId": "bbf1a4fa-6c3c-4e30-b519-361978dbc4b2"
       },
       "source": [
         "plt.scatter(salary_raw, np.arange(0,100), c=groups)\n",
@@ -347,7 +347,7 @@
         "plt.ylabel('Indices')\n",
         "plt.show()"
       ],
-      "execution_count": 8,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "display_data",
@@ -409,7 +409,7 @@
         "import matplotlib.pyplot as plt\n",
         "from sklearn.cluster import KMeans"
       ],
-      "execution_count": 9,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -420,7 +420,7 @@
       "source": [
         "image_location = 'https://user-images.githubusercontent.com/42711978/87903363-71f5a900-ca79-11ea-9317-3c7dc7eccc27.jpg'\n"
       ],
-      "execution_count": 10,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -431,7 +431,7 @@
           "height": 510
         },
         "id": "VQtCbRnmG-sQ",
-        "outputId": "a6cd86dd-8ef4-4886-ebeb-fbce0f5bbf9e"
+        "outputId": "a45964bc-0f6a-4564-ab5d-848aa44ae767"
       },
       "source": [
         "image = io.imread(image_location)\n",
@@ -454,7 +454,7 @@
         "print(\"Data Sample: \")\n",
         "all_pixels[:3]"
       ],
-      "execution_count": 11,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -500,10 +500,10 @@
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 314
+          "height": 294
         },
         "id": "CFQYUQ9THAuJ",
-        "outputId": "df008db3-ee15-462f-af59-aa63740b6bcf"
+        "outputId": "8d120fb1-709c-47e5-b93f-e515d64b77a7"
       },
       "source": [
         "#Update the optimal value of k below\n",
@@ -526,7 +526,7 @@
         "print(\"CLUSTER-LEVEL DOMINANT COLOURS (K = \" + str(k) + \")\")\n",
         "plt.show()"
       ],
-      "execution_count": 12,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -568,7 +568,7 @@
         "    image_compressed[ix] = kmeans_centroids[kmeans.labels_[ix]]\n",
         "image_compressed = image_compressed.reshape(image.shape)"
       ],
-      "execution_count": 13,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -576,10 +576,10 @@
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 511
+          "height": 565
         },
         "id": "cdbZFF0GHKA7",
-        "outputId": "f6836d3b-a54a-43a3-af8c-4150a7ed06da"
+        "outputId": "0cc01e06-d6d1-43dc-9e32-887e050ed809"
       },
       "source": [
         "#Let us compare our image and compressed image\n",
@@ -596,7 +596,7 @@
         "\n",
         "plt.show()"
       ],
-      "execution_count": 14,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "display_data",
@@ -627,7 +627,7 @@
           "height": 1000
         },
         "id": "h1dtOz5rHT7H",
-        "outputId": "d087c841-d5db-4992-b5e2-c86acdcbecc7"
+        "outputId": "eef15113-1efc-4d02-d201-a42b34a441aa"
       },
       "source": [
         "K = [2, 3, 5, 10]\n",
@@ -654,7 +654,7 @@
         "plt.axis(False)\n",
         "plt.show()"
       ],
-      "execution_count": 15,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -768,7 +768,7 @@
         "id": "0mFi1TNEVpZz"
       },
       "source": [],
-      "execution_count": 15,
+      "execution_count": null,
       "outputs": []
     }
   ]
